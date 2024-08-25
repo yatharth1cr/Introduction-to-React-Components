@@ -127,7 +127,7 @@ table {
 }
 
 body {
-  background: linear-gradient(to right, #f1ba80, #27b02c);
+  background: linear-gradient(to right, rgb(201, 110, 110), #a57373);
   font-family: cursive;
   text-align: center;
   color: #000;
@@ -136,7 +136,7 @@ body {
 div {
   margin: 2rem auto auto auto;
   width: 50%;
-  background: linear-gradient(to right, #97c1e7, #959ede);
+  background: linear-gradient(to right, #d488e2, #3749d6);
   padding: 2rem 0;
   border-radius: 12px;
 }

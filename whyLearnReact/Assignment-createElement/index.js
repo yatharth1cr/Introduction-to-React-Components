@@ -6,13 +6,11 @@ let allMovies = [];
 
 // addEventListener on input
 input.addEventListener("keyup", (event) => {
-  //   console.log(event.keyCode);
   if (event.keyCode === 13 && event.target.value != "") {
     allMovies.push({
       name: event.target.value,
       watched: false,
     });
-    // console.log(allMovies);
     event.target.value = "";
     createUI(allMovies, rootElm);
   }
@@ -26,6 +24,8 @@ function createElement(type, attribute = {}) {
       element.setAttribute(key, attribute[key]);
     } else if (key.startsWith("on")) {
       element.addEventListener("click");
+    } else {
+      element[key] = attribute[key];
     }
   }
   return element;
@@ -38,11 +38,11 @@ function createUI(data, root) {
     var li = createElement("li", {
       innerText: movie.name,
     });
-    // li.innerText = movie.name;
 
-    var btn = createElement("button");
-    btn.id = i;
-    btn.innerText = movie.watched ? "Watched" : "To watch";
+    var btn = createElement("button", {
+      id: i,
+      innerText: movie.watched ? "Watched" : "To watch",
+    });
 
     li.append(btn);
     root.append(li);
