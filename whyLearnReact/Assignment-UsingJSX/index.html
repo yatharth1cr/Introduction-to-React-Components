@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment | Using JSX</title>
+
+    <!-- linking stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <h1>Movie Watch List App</h1>
+      <input type="text" placeholder="Enter the movie name!" />
+      <ul class="movies-list"></ul>
+    </div>
+  </body>
+
+  <!-- load react -->
+  <script
+    src="https://unpkg.com/react@18/umd/react.development.js"
+    crossorigin
+  ></script>
+  <script
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    crossorigin
+  ></script>
+  <!-- load babel -->
+
+  <!-- connect js file -->
+  <script type="text/javascript" src="./script.js">
+    var input = document.querySelector("input");
+        var rootElm = document.querySelector("ul");
+
+        let allMovies = [];
+
+        input.addEventListener("keyup", (event) => {
+          if (event.keyCode === 13 && event.target.value !== "") {
+            allMovies.push({
+              name: event.target.value,
+              watched: false,
+            });
+            event.target.value = "";
+            createUI();
+          }
+        });
+
+        // handleChange function
+        function handleChange(event) {
+          let id = event.target.id;
+          allMovies[id].watched = !allMovies[id].watched;
+          createUI(allMovies, rootElm);
+        }
+
+        function createUI(data = allMovies, root = rootElm) {
+          let ui = data.map((movie, i) => {
+             <li>
+                {movie.name}
+                <button></button>
+                </li>
+            // let li = React.createElement(
+            //   "li",
+            //   { key: i },
+            //   movie.name,
+            //   React.createElement("button", {
+            //     id: i,
+            //     children: movie.watched ? "Watched" : "To Watch",
+            //     onClick: handleChange,
+            //   })
+            // );]
+
+            return li;
+          });
+
+          let rootElement = ReactDOM.createRoot(root);
+          rootElement.render(ui);
+        }
+  </script>
+</html>
