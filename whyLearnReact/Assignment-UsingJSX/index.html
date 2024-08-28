@@ -25,55 +25,48 @@
     src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
     crossorigin
   ></script>
+
   <!-- load babel -->
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
   <!-- connect js file -->
-  <script type="text/javascript" src="./script.js">
+  <script type="text/babel">
+    // JSX code goes
     var input = document.querySelector("input");
-        var rootElm = document.querySelector("ul");
+    var rootElm = document.querySelector("ul");
 
-        let allMovies = [];
+    let allMovies = [];
 
-        input.addEventListener("keyup", (event) => {
-          if (event.keyCode === 13 && event.target.value !== "") {
-            allMovies.push({
-              name: event.target.value,
-              watched: false,
-            });
-            event.target.value = "";
-            createUI();
-          }
+    input.addEventListener("keyup", (event) => {
+      if (event.keyCode === 13 && event.target.value !== "") {
+        allMovies.push({
+          name: event.target.value,
+          watched: false,
         });
+        event.target.value = "";
+        createUI();
+      }
+    });
 
-        // handleChange function
-        function handleChange(event) {
-          let id = event.target.id;
-          allMovies[id].watched = !allMovies[id].watched;
-          createUI(allMovies, rootElm);
-        }
+    // handleChange function
+    function handleChange(event) {
+      let id = event.target.id;
+      allMovies[id].watched = !allMovies[id].watched;
+      createUI(allMovies, rootElm);
+    }
 
-        function createUI(data = allMovies, root = rootElm) {
-          let ui = data.map((movie, i) => {
-             <li>
-                {movie.name}
-                <button></button>
-                </li>
-            // let li = React.createElement(
-            //   "li",
-            //   { key: i },
-            //   movie.name,
-            //   React.createElement("button", {
-            //     id: i,
-            //     children: movie.watched ? "Watched" : "To Watch",
-            //     onClick: handleChange,
-            //   })
-            // );]
+    function createUI(data = allMovies, root = rootElm) {
+      let ui = data.map((movie, i) => (
+        <li key={i}>
+          {movie.name}
+          <button id={i} onClick={handleChange}>
+            {movie.watched ? "Watched" : "To Watch"}
+          </button>
+        </li>
+      ));
 
-            return li;
-          });
-
-          let rootElement = ReactDOM.createRoot(root);
-          rootElement.render(ui);
-        }
+      let rootElement = ReactDOM.createRoot(root);
+      rootElement.render(ui);
+    }
   </script>
 </html>
