@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- title of the page -->
+    <title>Article Card | JSX</title>
+
+    <!-- link stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- link font awesome -->
+    <script
+      src="https://kit.fontawesome.com/ee770dc837.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <h1>Article Card</h1>
+    <div class="card-root"></div>
+
+    <!-- load react -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <!-- load babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+      let cardInfo = {
+        title: "City Lights in New York",
+        date: new Date("2017-01-26").toLocaleDateString("en-GB", {
+          day: "2-digit",
+          month: "short",
+        }),
+        comments: 67,
+        subTitle: "The city that never sleeps.",
+        description:
+          "New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.",
+        category: "photos",
+        imageURL:
+          "https://images.unsplash.com/photo-1610874933184-7728fd666162?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      };
+
+      let root = document.querySelector(".card-root");
+      let cardUI = (
+        <div>
+          <img src={cardInfo.imageURL} alt={cardInfo.subTitle} />
+          <h6>{cardInfo.category}</h6>
+          <span>{cardInfo.date}</span>
+          <h2>{cardInfo.title}</h2>
+          <h3>{cardInfo.subTitle}</h3>
+          <p>{cardInfo.description}</p>
+          <h5>
+            9 min ago
+            <i
+              className="fa-solid fa-comments"
+              style={{ color: "#999999" }}
+            ></i>
+            {cardInfo.comments} comments
+          </h5>
+        </div>
+      );
+      ReactDOM.createRoot(root).render(cardUI);
+    </script>
+  </body>
+</html>
