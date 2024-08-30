@@ -12,3 +12,7 @@
 ### 3. **Components and Props**
 - Using Toolchain (Assignment: Break UI into Components)
 - Creating UI with Data (Assignment: Articles App)
+
+### 4. **PropTypes and Events**
+- Typechecking with PropTypes (Assignment: PropTypes to Articles App)
+- Understanding Events (Assignments: onClick Events)
