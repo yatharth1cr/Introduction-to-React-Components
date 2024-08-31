@@ -7,7 +7,7 @@ function Articles() {
       <h1>Articles</h1>
       <div className="flex">
         {allArticles.map((article) => (
-          <Article key={article.publishedAt} {...article} />
+          <Article key={article.publishedAt.toLowerCase()} {...article} />
         ))}
       </div>
     </section>
