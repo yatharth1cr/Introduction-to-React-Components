@@ -1,4 +1,4 @@
-// import Articles from "./sarticles";
+import PropTypes from "prop-types";
 
 function Article(props) {
   return (
@@ -8,5 +8,9 @@ function Article(props) {
     </div>
   );
 }
+
+Article.propTypes = {
+  urlToImage: PropTypes.string.isRequired,
+};
 
 export default Article;
