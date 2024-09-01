@@ -1,0 +1,16 @@
+.App {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button {
+  font-size: 1.25rem;
+  font-weight: bold;
+  background-color: rgb(172, 159, 41);
+  border: none;
+  width: 350px;
+  margin: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
