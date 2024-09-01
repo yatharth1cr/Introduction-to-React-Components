@@ -16,3 +16,8 @@
 ### 4. **PropTypes and Events**
 - Typechecking with PropTypes (Assignment: PropTypes to Articles App)
 - Understanding Events (Assignments: onClick Events)
+
+### 5. **Assignment Level 2 & 3**
+- Assignment: React, ReactDOM and Babel
+- Assignment: HTML to React
+- Assignment: Color Pallet UI
