@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/ee770dc837.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Adding media</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+      let root = document.getElementById("root");
+
+      function Header() {
+        return (
+          <header className="hero">
+            <div className="container flex">
+              <h1>Hydro</h1>
+              <nav>
+                <ul className="flex head">
+                  <li>
+                    <a href="#">Home</a>
+                  </li>
+
+                  <li>
+                    <a href="#">About</a>
+                  </li>
+
+                  <li>
+                    <a href="#">Blog</a>
+                  </li>
+
+                  <li>
+                    <a href="#">Our Work</a>
+                  </li>
+
+                  <li>
+                    <a href="#">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+              <nav>
+                <ul className="flex">
+                  <li>
+                    <a href="https://facebook.com">
+                      <i className="fab fa-facebook-square"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com">
+                      <i className="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://intsagram.com">
+                      <i className="fab fa-instagram"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <p className="btn">Sign in/Join</p>
+            </div>
+          </header>
+        );
+      }
+
+      function Main() {
+        return (
+          <main>
+            <section className="hero sec1">
+              <div className="container flex">
+                <div className="text">
+                  <h2>We make beautiful website for all people.</h2>
+                  <div className="flex2">
+                    <span className="btn2">Start project</span>
+                    <span className="span">
+                      <p>CALL US (+88) 345-678-123</p>
+                      <span>For any inquiry</span>
+                    </span>
+                  </div>
+                </div>
+                <div>
+                  <iframe
+                    width="450"
+                    height="250"
+                    src="https://www.youtube.com/embed/AqcjdkPMPJA"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <div className="container flex centre">
+                <div className="introtext">
+                  <h3>Let us introduce</h3>
+                  <div className="square"></div>
+                  <div className="square"></div>
+                  <div className="square"></div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laboriosam debitis fugiat nisi ex dignissimos ipsam
+                    perspiciatis consectetur consequatur iusto corrupti
+                    consequuntur minima nihil
+                  </p>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Eos dolorum, praesentium.
+                  </p>
+                </div>
+                <div>
+                  <ul className="intro">
+                    <li className="flex">
+                      <p className="eighty-five">Web Design</p>
+                      <span>85%</span>
+                    </li>
+                    <li className="flex">
+                      <p className="ninty">Photography</p>
+                      <span>90%</span>
+                    </li>
+                    <li className="flex">
+                      <p className="seventy-five">Content Marketing</p>
+                      <span>75%</span>
+                    </li>
+                    <li className="flex">
+                      <p className="seventy">CMS design</p>
+                      <span>70%</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <img
+                    className="intro-img"
+                    src="assets/about-image.jpg"
+                    alt="img"
+                  />
+                </div>
+              </div>
+            </section>
+
+            <section className="data-blog">
+              <h3 className="cntrhead">OUR BLOG</h3>
+              <div style={{ textAlign: "center" }}>
+                <div className="square"></div>
+                <div className="square"></div>
+                <div className="square"></div>
+              </div>
+              <div className="container flex cards">
+                <div className="card flex">
+                  <div>
+                    <img src="assets/blog-image1.jpg" alt="img1" />
+                  </div>
+                  <div className="crdtxt">
+                    <span className="circle"> </span>
+                    <time>Decemeber 22 2017</time>
+                    <h4>How To Find Out Beautiful Workspace</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+                    <p className="btn3">Read Article</p>
+                  </div>
+                </div>
+                <div className="card flex">
+                  <div>
+                    <img src="assets/blog-image2.jpg" alt="img1" />
+                  </div>
+                  <div className="crdtxt">
+                    <span className="circle"> </span>
+                    <time>Decemeber 2 2023</time>
+                    <h4>Woman Sportswear</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+                    <p className="btn3">Read more</p>
+                  </div>
+                </div>
+                <div className="card flex">
+                  <div>
+                    <img src="assets/blog-image3.jpg" alt="img1" />
+                  </div>
+                  <div className="crdtxt">
+                    <span className="circle"> </span>
+                    <time>Decemeber 1 2023</time>
+                    <h4>New Creative Fashion.</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+                    <p className="btn3">Read article</p>
+                  </div>
+                </div>
+                <div className="card flex">
+                  <div>
+                    <img src="assets/blog-image4.jpg" alt="img1" />
+                  </div>
+                  <div className="crdtxt">
+                    <span className="circle"> </span>
+                    <time>Decemeber 22 2023</time>
+                    <h4>Minimalist Design Trend In 2023</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+                    <p className="btn3">View detail</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section className="data-work">
+              <h3 className="cntrhead">OUR WORK</h3>
+              <div style={{ textAlign: "center" }}>
+                <div className="square"></div>
+                <div className="square"></div>
+                <div className="square"></div>
+              </div>
+              <div className="flexC">
+                <img
+                  className="workimg"
+                  src="assets/work-image1.jpg"
+                  alt="img1"
+                />
+                <img
+                  className="workimg"
+                  src="assets/work-image2.jpg"
+                  alt="img2"
+                />
+                <img
+                  className="workimg"
+                  src="assets/work-image3.jpg"
+                  alt="img3"
+                />
+                <img
+                  className="workimg"
+                  src="assets/work-image4.jpg"
+                  alt="img4"
+                />
+              </div>
+            </section>
+          </main>
+        );
+      }
+
+      function Footer() {
+        return (
+          <footer>
+            <div className="container flex ftrtop">
+              <ul className="col col-1">
+                <li className="ftrhead">Hydro Company</li>
+                <li className="footerli">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Autem nobis tempora id, labore inventore nihil voluptatem
+                  totam.
+                </li>
+              </ul>
+              <ul className="col col-2">
+                <li className="ftrhead">Company</li>
+                <li className="footerli">About Us</li>
+                <li className="footerli">Join our team</li>
+                <li className="footerli">Read Blog</li>
+                <li className="footerli">Press</li>
+              </ul>
+              <ul className="col col-3">
+                <li className="ftrhead">Services</li>
+                <li className="footerli">Pricing</li>
+                <li className="footerli">Documentation</li>
+                <li className="footerli">Support</li>
+              </ul>
+              <ul className="col col-4">
+                <li className="ftrhead">Find Us</li>
+                <li className="footerli">123 Grand Rama IX,</li>
+                <li className="footerli">Karang Thepa Maha Sangha 104000</li>
+              </ul>
+            </div>
+            <hr style={{ width: 1000 }} />
+            <div className="container flex bottom">
+              <p style={{ fontSize: 12 }}>Copyright &copy; 2023 Your Company</p>
+              <p style={{ marginLeft: 200, fontsize: 12 }}>
+                CALL US (+88) 345-678-123
+              </p>
+              <nav>
+                <ul className="flex" style={{ marginright: 160 }}>
+                  <li style={{ marginRight: -10 }}>
+                    <a href="https://facebook.com">
+                      <i className="fab fa-facebook-square"></i>
+                    </a>
+                  </li>
+                  <li style={{ marginRight: -10 }}>
+                    <a href="https://twitter.com">
+                      <i className="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://intsagram.com">
+                      <i className="fab fa-instagram"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </footer>
+        );
+      }
+      function App() {
+        return (
+          <div id="root">
+            <Header />
+            <Main />
+            <Footer />
+          </div>
+        );
+      }
+      ReactDOM.createRoot(root).render(<App />);
+    </script>
+  </body>
+</html>
